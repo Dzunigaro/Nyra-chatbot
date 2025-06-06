@@ -51,6 +51,8 @@ npm install
 npm run dev
 This will launch the React app at http://localhost:5173 (or the port Vite chooses).
 
-##🔧 Configuration
+---
+
+## 🔧 Configuration
 .env file (Backend):
 OPENAI_API_KEY=your_openai_key
