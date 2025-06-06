@@ -29,7 +29,7 @@ Nyra is a web-based chat assistant powered by FastAPI and React. It supports str
 
 ### 1. Clone the Repo
 
-```bash
+bash
 git clone https://github.com/your-username/nyra-chatbot.git
 cd nyra-chatbot
 
