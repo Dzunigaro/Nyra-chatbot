@@ -33,7 +33,7 @@ bash
 git clone https://github.com/your-username/nyra-chatbot.git
 cd nyra-chatbot
 
-2. Backend Setup (Python / FastAPI)
+### 2. Backend Setup (Python / FastAPI)
 Create a virtual environment:
 python -m venv venv
 source venv/bin/activate  # or `venv\Scripts\activate` on Windows
@@ -45,12 +45,12 @@ Update it with your actual API key(s).
 Run the backend:
 uvicorn main:app --reload --port 8000
 
-3. Frontend Setup (React / Vite)
+### 3. Frontend Setup (React / Vite)
 cd frontend  # if frontend is in a subfolder; otherwise, skip
 npm install
 npm run dev
 This will launch the React app at http://localhost:5173 (or the port Vite chooses).
 
-🔧 Configuration
+##🔧 Configuration
 .env file (Backend):
 OPENAI_API_KEY=your_openai_key
