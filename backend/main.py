@@ -4,6 +4,10 @@ from fastapi import FastAPI, Query, Request, status
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 from pdf_loader import load_pdf_chunks_and_embeddings, get_relevant_chunks
 
@@ -27,7 +31,7 @@ app.add_middleware(
 )
 
 # Initialize OpenAI client
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Global variables to store PDF chunks and their embeddings
 chunks = []
