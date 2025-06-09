@@ -5,6 +5,10 @@ import numpy as np
 from typing import List, Tuple, Optional
 from fastapi.concurrency import run_in_threadpool
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 
 # Set up logging
 logging.basicConfig(
@@ -14,7 +18,8 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Initialize OpenAI client
-client = OpenAI()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+
 
 def extract_text_from_pdf(pdf_path: str) -> str:
     """
